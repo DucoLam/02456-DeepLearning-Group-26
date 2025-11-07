@@ -1,5 +1,2 @@
 # Ignore everything in the Dataset folder
 Dataset/*
-
-# But keep the Dataset folder itself
-!Dataset/
