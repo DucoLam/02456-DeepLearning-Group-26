@@ -1,6 +1,6 @@
 Dataset/*
 !Dataset/
 !Dataset/.gitkeep
-
+.venv
 
 Dataset/Dataset/*
