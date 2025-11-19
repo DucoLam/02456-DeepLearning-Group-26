@@ -1,21 +1,76 @@
+
 # Zero-Shot Anomaly Detection using Vision Foundation Models
 
 This repository contains the code, experiments, and documentation for the DTU 02456 Deep Learning project **"Zero-Shot Anomaly Detection using Vision Foundation Models"** (Group 26).
 
-## 📌 Project Overview
+---
+
+# Getting Started — Running the Setup
+
+To prepare the environment, install dependencies, and configure the dataset automatically, use the provided setup script for your operating system.
+
+## Windows
+
+Run the batch setup script:
+
+```powershell
+.\setup.bat
+```
+
+This script will:
+
+- Create or reuse a Python virtual environment (`.venv`)
+- Optionally install all Python dependencies from `requirements.txt`
+- Detect GPU / CUDA availability
+- Optionally download and extract the **MVTec AD dataset**
+- Allow you to run the anomaly detection pipeline with default or custom parameters
+
+## Linux / macOS
+
+Make the setup script executable and run it:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+The Linux version provides the same functionality:
+
+- Virtual environment creation and activation
+- Optional dependency installation
+- GPU detection (CUDA)
+- Optional dataset download + extraction
+- Interactive parameter selection for the experiment
+
+## After Setup
+
+Once the setup script completes, you can:
+
+- Run the pipeline with default parameters
+- Configure custom experiment settings
+- View available command-line options via:
+
+```bash
+python run_mvtec_optuna_study.py --help
+```
+
+---
+
+
+## Project Overview
 
 Industrial quality inspection often suffers from a lack of defective samples and the unpredictable nature of anomalies. Traditional supervised deep learning methods require large labeled datasets of both normal and defective samples, which are costly and impractical to obtain in industrial settings.
 
 This project explores **zero-shot anomaly detection** using **pre-trained vision foundation models** such as **DINOv3**, **Mirroring DINO**, and **Segment Anything (SAM)**. The goal is to design a **generalizable anomaly detection pipeline** that can identify surface defects without any additional training — reducing the need for labeled data and retraining.
 
-## 🎯 Objectives
+## Objectives
 
 - Apply large pre-trained **vision models** (e.g., DINOv3, SAM) to detect anomalies in industrial images.
 - Leverage **patch-level embeddings** to compare normal and defective regions.
 - Develop a **zero-shot detection pipeline** evaluated on the **MVTec Anomaly Detection (AD)** dataset.
 - Optionally extend the project with **few-shot classification** or **prompt-based feature adaptation**.
 
-## 🧠 Background
+## Background
 
 Recent progress in **self-supervised vision models** such as DINOv3 and SAM has shown strong generalization capabilities across diverse tasks. These models learn transferable, high-level visual features that can describe textures and shapes without supervision.
 
@@ -25,7 +80,7 @@ Recent progress in **self-supervised vision models** such as DINOv3 and SAM has 
 
 This project builds upon these insights to develop a **zero-shot anomaly localization and detection pipeline** using pre-trained foundation model embeddings.
 
-## 🗓️ Project Milestones
+## Project Milestones
 
 | Week | Milestone |
 |------|------------|
@@ -35,13 +90,13 @@ This project builds upon these insights to develop a **zero-shot anomaly localiz
 | 12 | Debug and clean the pipeline; start drafting the report. |
 | 13 | Finalize and submit the report. |
 
-## ⚙️ Technologies
+## Technologies
 
 - **Frameworks:** PyTorch, NumPy, OpenCV, Matplotlib  
 - **Models:** DINOv3, Mirroring DINO, SAM  
-- **Dataset:** [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad)
+- **Dataset:** MVTec AD
 
-## 📚 References
+## References
 
 1. Bergmann, P., Fauser, M., Sattlegger, D., & Steger, C. (2019). *MVTec AD – A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection*. CVPR.  
 2. Oquab, M., Caron, M., Assran, M., Misra, I., & Joulin, A. (2025). *DINOv3: Scaling Self-Supervised Learning for Universal Vision Representations*. arXiv:2508.10104.  
@@ -51,7 +106,7 @@ This project builds upon these insights to develop a **zero-shot anomaly localiz
 
 ---
 
-### 🧑‍💻 Contributors
+### Contributors
 - D. Lam (s252126)  
 - W. Wang (s251983)  
 - A. Pedraza (s251894)
