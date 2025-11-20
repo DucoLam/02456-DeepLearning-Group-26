@@ -4,3 +4,4 @@ Dataset/*
 .venv
 
 Dataset/Dataset/*
+embeddings/*

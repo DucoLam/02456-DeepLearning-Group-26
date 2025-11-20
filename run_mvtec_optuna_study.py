@@ -401,7 +401,11 @@ def build_dataloaders(
     train_loader = DataLoader(
         train_dataset,
         batch_size=batch_size,
+<<<<<<< HEAD
+        shuffle=False,
+=======
         shuffle=True,
+>>>>>>> 8fb84f206ac932cf65e89fc479a838dd67c05f84
         num_workers=0,
     )
     test_loader = DataLoader(
