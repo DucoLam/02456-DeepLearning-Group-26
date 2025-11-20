@@ -401,7 +401,7 @@ def build_dataloaders(
     train_loader = DataLoader(
         train_dataset,
         batch_size=batch_size,
-        shuffle=True,
+        shuffle=False,
         num_workers=0,
     )
     test_loader = DataLoader(
