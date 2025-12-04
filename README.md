@@ -23,7 +23,6 @@ This script will:
 - Optionally install all Python dependencies from `requirements.txt`
 - Detect GPU / CUDA availability
 - Optionally download and extract the **MVTec AD dataset**
-- Allow you to run the anomaly detection pipeline with default or custom parameters
 
 ## Linux / macOS
 
@@ -40,19 +39,12 @@ The Linux version provides the same functionality:
 - Optional dependency installation
 - GPU detection (CUDA)
 - Optional dataset download + extraction
-- Interactive parameter selection for the experiment
 
 ## After Setup
 
 Once the setup script completes, you can:
 
-- Run the pipeline with default parameters
-- Configure custom experiment settings
-- View available command-line options via:
-
-```bash
-python run_mvtec_optuna_study.py --help
-```
+- Run the pipeline using the mainpipeline.ipynb
 
 ---
 
