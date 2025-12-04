@@ -6,7 +6,6 @@ Dataset/*
 embeddings/*
 patch_embeddings/*
 pooled_embeddings/*
-NEW_embeddings/*
 
 Testing/*
 
