@@ -1,8 +1,11 @@
+matplotlib
+seaborn
 numpy
 torch
 torchvision
 timm
+faiss-cpu
 optuna
+Pillow
+scipy
 scikit-learn
-pillow
-seaborn
