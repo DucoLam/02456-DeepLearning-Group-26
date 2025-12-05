@@ -48,6 +48,12 @@ Once the setup script completes, you can:
 
 ---
 
+## Running the Pipeline
+
+There are two main components:
+1. The main pipeline produces both pooled and patch embeddings. Note that the embeddings are saved to .npz files which are then loaded into the pipeline. This reduces computational time for iteration, removing the need for the creation of new embeddings each time. Graphical results for PCA, anomaly maps, and F1 Optuna studies are printed in the notebook directly.
+2. The GMM study loads in the pooled embeddings created by the main pipeline. This file is separate to reduce clutter, and optimizes paremeters to obtain the F1 score for classification using mean-pooled embeddings.
+
 
 ## Project Overview
 
